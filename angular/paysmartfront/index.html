@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="tienda">
+	<head>
+		
+		<script src="angular/angular.min.js"></script>
+		<script src="angular/app.js"></script>
+		
+	</head>
+
+	<body ng-controller="AppCtl">
+ <form name="formgasto" >
+      <label for="txtFecha">Fecha</label><br />
+      <input name="txtFecha" type="date" ng-model="gasto.fecha" />
+      <br />
+      <label for="txtConcepto">Concepto</label><br />
+      <input name="txtConcepto" type="text" ng-model="gasto.concepto" />
+      <br />
+      <label for="cmbPrioridad">Prioridad</label><br />
+      
+	  <select name ="cmbPrioridad" ng-model="gasto.prioridad" >
+		  <option value="A">Alto</option>
+		  <option value="MA">Medio Alto</option>
+		  <option value="M">Medio</option>
+		  <option value="MB">Medio Bajo</option>
+		  <option value="B">Bajo</option>
+	  </select>
+	  
+	  <br />
+      <label for="txtValor">valor</label><br />
+      <input name="txtValor" type="text" ng-model="gasto.valor" />
+      
+      <br /><br />
+      <input type="button" ng-click="reset()" value="Limpiar" />
+      <input type="submit" ng-click="update()" value="Guardar" />
+    </form>
+    <pre>gasto = {{gasto | json}}</pre>
+	</body>
+</html>
