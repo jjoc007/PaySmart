@@ -4,7 +4,7 @@ from mongodb.Gasto import Gasto
 
 class GastoRest(Resource):
     def get(self):
-        return {'hello': 'world'}
+        return {'hello': 'Juan Jose'}
 
     def post(self):
         print(request)

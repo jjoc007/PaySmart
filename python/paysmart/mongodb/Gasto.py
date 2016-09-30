@@ -7,7 +7,6 @@ class Gasto:
 
     conexionDB = None
 
-
     #INSERTAR
     def insert(self, document):
         conexion = Conexion.getConexion()
@@ -15,8 +14,6 @@ class Gasto:
         result = db.gastos.insert_one(document)
         print(result)
         return result
-
-
 
     #INSERTAR DE FORMA MASIVA
     def insertMasive(self, collectionName):

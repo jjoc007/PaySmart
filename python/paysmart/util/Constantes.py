@@ -11,4 +11,7 @@ class Constantes:
     DB_USER = ""
     DB_PASSWORD = ""
 
+    #BASE DE DATOS POSTGRES
+    DB_POSTGRES_URL = "postgresql://postgres:postgres@localhost:5432/paysmart"
+
 

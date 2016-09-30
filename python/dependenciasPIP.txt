@@ -1,0 +1,12 @@
+#dependendias PIP para flask
+Flask
+pymongo
+flask_restful
+flask_cors
+psycopg2
+Flask-SQLAlchemy
+Flask-Migrate
+
+
+#dependencias para conexion con postgres
+sudo apt-get install postgresql-server-dev-9.5
