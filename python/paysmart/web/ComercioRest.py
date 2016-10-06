@@ -1,14 +1,14 @@
 from flask_restful import Resource
 from flask import request
-from mongodb.Gasto import Gasto
+from mongodb.Comercio import Comercio
 
 class GastoRest(Resource):
 
     def post(self):
         print(request)
-        print(request.json['gasto'])
+        print(request.json['comercio'])
 
-        gasto= Gasto()
-        gasto.insert(request.json['gasto'])
+        comercio= Comercio()
+        comercio.insert(request.json['comercio'])
 
         return {'hola': 'mundo'}

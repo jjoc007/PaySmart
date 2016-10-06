@@ -5,22 +5,14 @@ from postgresdb.Conexion import Conexion
 
 class SubCategoriaRest(Resource):
     
-    def get(self):
-
-        Conexion.getConexion()
-        session = Conexion.session
-
-        cat1 = SubCategoria('IMPUESTOS',35)
-        cat2 = SubCategoria('VECA',36)
-        session.add(cat1)
-        session.add(cat2)
-        session.commit()
-
-        return {'hello': 'Juan Jose'}
-
     def post(self):
         
-        return {'hola': 'mundo'}
+        Conexion.getConexion()
+        session = Conexion.session
+        categoriaRequest = request.json['subCategoria']
 
-    def options(self):
-        return ""
+        subCategoriaDao = SubCategoria(categoriaRequest['descripcion'], categoriaRequest['idCategoria'])
+        session.add(subCategoriaDao)
+        session.commit()        
+
+        return {'response': 'Correct!!'}
