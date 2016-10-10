@@ -2,7 +2,7 @@ from flask_restful import Resource
 from flask import request
 from mongodb.Comercio import Comercio
 
-class GastoRest(Resource):
+class ComercioRest(Resource):
 
     def post(self):
         print(request)

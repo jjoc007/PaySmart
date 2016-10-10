@@ -33,3 +33,19 @@ class SubCategoria(Base):
         
     def __repr__(self):
         return '<id {}>'.format(self.id)
+
+class Usuario(Base):
+    __tablename__ = 'usuario'
+
+    id = Column(Integer, primary_key=True)
+    usuario = Column(String())
+    clave   = Column(String())
+    correo  = Column('correo_electronico',String())
+
+    def __init__(self, usuario, clave, correo):
+        self.usuario =  usuario
+        self.clave   =  clave
+        self.correo  =  correo
+        
+    def __repr__(self):
+        return '<id {}>'.format(self.id)
