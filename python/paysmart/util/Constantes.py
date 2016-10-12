@@ -7,7 +7,7 @@ class Constantes:
 
     #DATOS BASE DE DATOS MONGO
     DB_HOST = "localhost"
-    DB_PORT = "27017"
+    DB_PORT = "27018"
     DB_USER = ""
     DB_PASSWORD = ""
 

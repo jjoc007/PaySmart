@@ -15,6 +15,13 @@ class Gasto:
         print(result)
         return result
 
+    #CONSULTAR TODOS
+    def getAll(self):
+        conexion = Conexion.getConexion()
+        db = conexion.test
+        result = db.gastos.find()
+        return result
+
     #INSERTAR DE FORMA MASIVA
     def insertMasive(self, collectionName):
         os.system("mongoimport --db test --collection "+collectionName+" --file "+Constantes.FILE_OUTPUT_JSON)

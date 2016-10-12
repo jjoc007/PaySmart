@@ -11,6 +11,8 @@ from web.CategoriaRest  import CategoriaRest
 from web.SubCategoriaRest  import SubCategoriaRest
 from web.ComercioRest  import ComercioRest
 from web.UsuarioRest  import UsuarioRest
+from web.PresupuestoRest  import PresupuestoRest
+
 
 app = Flask(__name__)
 
@@ -23,6 +25,7 @@ jwt = JWT(app, JwtUtils.authenticate, JwtUtils.identity)
 #SERVICIOS
 api.add_resource(GastoRest, '/Gasto',endpoint='Gasto')
 api.add_resource(ComercioRest, '/Comercio',endpoint='Comercio')
+api.add_resource(PresupuestoRest, '/Presupuesto',endpoint='Presupuesto')
 
 api.add_resource(CategoriaRest, '/Categoria',endpoint='Categoria')
 api.add_resource(SubCategoriaRest, '/SubCategoria',endpoint='SubCategoria')

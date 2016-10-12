@@ -12,7 +12,7 @@ class Conexion:
 
         try:
             conectorMongo = MongoClient("mongodb://"+Constantes.DB_HOST+":"+Constantes.DB_PORT)
-            print("Conectado a Mongo !!")
+            print("Connected to Mongo")
         except ConnectionFailure, e:
             sys.stderr.write("no se conecto: %s" % e)
         return conectorMongo

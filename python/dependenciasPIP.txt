@@ -6,6 +6,7 @@ flask_cors
 psycopg2
 Flask-SQLAlchemy
 Flask-Migrate
+Flask-JWT
 
 
 #dependencias para conexion con postgres
